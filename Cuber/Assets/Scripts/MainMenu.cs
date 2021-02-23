@@ -22,7 +22,6 @@ public class MainMenu : MonoBehaviour
             if (button == buttons[count])
             {
                 SceneManager.LoadScene(count);
-                Debug.Log(count);
             }
         }
     }
