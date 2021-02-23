@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     public Button[] buttons;
     public void PlayTutorial()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Tutorial");
     }
     public void ExitGame()
     {
@@ -24,5 +24,13 @@ public class MainMenu : MonoBehaviour
                 SceneManager.LoadScene(count);
             }
         }
+    }
+    public void ResetLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void QuitToMain()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

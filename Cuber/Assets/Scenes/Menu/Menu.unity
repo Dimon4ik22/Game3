@@ -541,10 +541,10 @@ RectTransform:
   m_Father: {fileID: 1510885715}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.143, y: 0.104}
-  m_AnchorMax: {x: 1, y: 0.20300001}
-  m_AnchoredPosition: {x: -25.201004, y: -25}
-  m_SizeDelta: {x: -51.208313, y: 1.0848541}
+  m_AnchorMin: {x: 0.143, y: 0.050146766}
+  m_AnchorMax: {x: 1, y: 0.13641295}
+  m_AnchoredPosition: {x: -25.200996, y: 2.9999998}
+  m_SizeDelta: {x: -51.208313, y: 7.084854}
   m_Pivot: {x: 0.5, y: 0.49999994}
 --- !u!114 &301300616
 MonoBehaviour:
@@ -1217,6 +1217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83808ae9ef872444fa1babe85049c2cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: []
 --- !u!1001 &633018833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1968,8 +1969,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1510885716}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayLevel1
-        m_Mode: 1
+        m_MethodName: PlayLevels
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2764,7 +2765,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1336915278}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1879938040}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1336915278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3291,7 +3304,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1510885715
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3327,6 +3340,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83808ae9ef872444fa1babe85049c2cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 832598421}
+  - {fileID: 1765666042}
+  - {fileID: 2046783788}
 --- !u!114 &1510885717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3963,12 +3980,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1510885716}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayLevel2
-        m_Mode: 1
+        m_MethodName: PlayLevels
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4187,7 +4204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1879938037
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4260,6 +4277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83808ae9ef872444fa1babe85049c2cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: []
 --- !u!1 &1939917031
 GameObject:
   m_ObjectHideFlags: 0
@@ -4398,7 +4416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.143, y: 0.34985328}
   m_AnchorMax: {x: 1, y: 0.43344027}
-  m_AnchoredPosition: {x: -25.603996, y: -1.9999931}
+  m_AnchoredPosition: {x: -25.603989, y: -2}
   m_SizeDelta: {x: -51.208313, y: 8.084854}
   m_Pivot: {x: 0.5, y: 0.5000002}
 --- !u!114 &2046783788
@@ -4446,12 +4464,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1510885716}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayLevelE
-        m_Mode: 1
+        m_MethodName: PlayLevels
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
