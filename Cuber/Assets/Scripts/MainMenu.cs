@@ -6,20 +6,24 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public Button[] buttons;
     public void PlayTutorial()
-    {
-        SceneManager.LoadScene(1);
-    }
-    public void PlayLevel1()
-    {
-        SceneManager.LoadScene(2);
-    }
-    public void PlayLevel2()
     {
         SceneManager.LoadScene(3);
     }
-    public void PlayLevelE()
+    public void ExitGame()
     {
-        SceneManager.LoadScene(4);
+        Application.Quit();
+    }
+    public void PlayLevels(int count)
+    {
+        foreach (Button button in buttons)
+        {
+            if (button == buttons[count])
+            {
+                SceneManager.LoadScene(count);
+                Debug.Log(count);
+            }
+        }
     }
 }
