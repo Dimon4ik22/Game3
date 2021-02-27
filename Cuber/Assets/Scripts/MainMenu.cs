@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioMixer audioMixer;
     public Button[] buttons;
     public void PlayTutorial()
     {
@@ -21,7 +23,7 @@ public class MainMenu : MonoBehaviour
         {
             if (button == buttons[count])
             {
-                SceneManager.LoadScene(count);
+                SceneManager.LoadScene(count + 1);
             }
         }
     }
@@ -32,5 +34,13 @@ public class MainMenu : MonoBehaviour
     public void QuitToMain()
     {
         SceneManager.LoadScene("Menu");
+    }
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("volume", volume);
+    }
+    public void SetQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
     }
 }
