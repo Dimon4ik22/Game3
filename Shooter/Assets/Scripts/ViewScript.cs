@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ViewScript : MonoBehaviour
 {
-    public float mouseSensitivity = 1000f;
+    public float mouseSensitivity = 100f;
     public Transform playerBody;
     float xRot = 0f;
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -18,7 +18,7 @@ public class ViewScript : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
         xRot -= mouseY;
-        Mathf.Clamp(mouseY, -90f, 90f);
+        xRot = Mathf.Clamp(xRot, -90f, 90f);
 
         transform.localRotation = Quaternion.Euler(xRot, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
